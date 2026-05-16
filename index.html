@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+        body {             
+            background-image: url("./img/flores.jpg");
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0 auto;
+            min-height: 100vh;          
+            width: 100%;
+            max-width: 1200px; 
+            padding: 0 15px; 
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 50px);             
+            color: #c0202f;
+            font-style: italic;   
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;            
+            align-items: center;
+            margin-top: 30px;
+            font-size: 18px;
+            border: none; 
+            padding: 0;
+        }  
+  </style>
+  <title>JS - 6.3</title>
+</head>
+  
+<body>
+       
+        <h1 class="font-bold block mb-1">Palabras bonitas</h1>        
+        <p class="par font-normal text-gray-700 text-s md:text-2xl block md:text-justify">
+          Los estudios lingüísticos modernos dicen que las palabras más bonitas del diccionario son aquellas que contienen 9 letras y empiezan por la letra H, o bien, contienen 5 letras y empiezan por la letra P.<br>Haz un programa que pida una palabra y e indique en un párrafo si la palabra es bonita o no (según el patrón explicado previamente)
+        </p>
+
+      <fieldset class="container w-full">
+        <p class="flex flex-col md:flex-row items-stretch md:items-center w-full md:w-4/5 lg:w-2/3 my-3">
+          <label for="palabra" class="w-full text-2xl md:flex-1 text-left md:text-right md:pr-8 mb-1 md:mb-0 font-medium text-amber-950">Escribe una palabra</label>
+          <input id="palabra" type="text" class="border-2 border-amber-800 w-full md:flex-1 rounded-lg pl-4 py-2 bg-white" placeholder="escribe una palabra">
+        </p>         
+        
+        <button onclick="result()" id="btn" class="border-2 bg-[#c0202f] rounded-lg text-amber-100 px-6 py-2 mt-5 text-xl md:text-2xl cursor-pointer hover:bg-amber-100 hover:text-[#c0202f] transition-colors">Result</button>    
+        
+        <p id="responda" class="text-center text-xl bg-amber-100 text-[#c0202f] border-2 border-amber-950 rounded-lg md:rounded-none md:border-none md:bg-transparent md:text-3xl lg:text-[#c0202f] px-4 font-bold py-2 mt-5 empty:hidden"></p>
+      </fieldset>        
+  
+  <script src="./js/app.js"></script>
+</body>
+</html>
